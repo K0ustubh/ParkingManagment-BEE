@@ -21,198 +21,93 @@
 }
 
 /* Navbar section */
-
-.nav{
+/* Navbar section */
+.nav {
     width: 100%;
-    height: 65px;
+    height: 65px;  /* Set height of navbar */
     position: fixed;
+    top: 0;        /* Ensure it stays at the top */
+    left: 0;
     line-height: 65px;
     text-align: center;
-    background-color: rgba(0,0,255,0.8);
+    background-color: rgba(0, 0, 255, 0.8);
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
-.nav div.logo{
+.nav div.logo {
     width: 180px;
-    height: 10px;
+    height: 65px;   /* Match the navbar height */
     position: absolute;
+    top: 0;
+    left: 10px;     /* Adjust the logo to be left aligned */
+    display: flex;
+    align-items: center;  /* Center logo vertically */
 }
 
-.nav div.logo a{
+.nav div.logo a {
     text-decoration: none;
     color: #fff;
     font-size: 1.8em;
     text-transform: uppercase;
 }
 
-.nav div.logo a:hover {
-    color: #c0c0c0;
-}
-
-.nav div.main_list{
+.nav div.main_list {
     width: 600px;
     height: 65px;
     float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.nav div.main_list ul{
-    width:100%;
+.nav div.main_list ul {
+    width: 100%;
     height: 65px;
     display: flex;
     list-style: none;
+    justify-content: space-around; /* Distribute items evenly */
+    margin: 0 15px;
 }
 
-.nav div.main_list ul li{
+.nav div.main_list ul li {
     width: 120px;
     height: 65px;
 }
 
-.nav div.main_list ul li a{
+.nav div.main_list ul li a {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
     text-transform: uppercase;
+    margin-left: -30px;
+    padding-left: 10px;   /* Adjust left padding for spacing */
+
 }
 
-.nav div.main_list ul li a:hover{
-    color: #c0c0c0;
-}
-
-.nav div.media_button {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    position: absolute;
-    right: 15px;
-    top: 12px;
-    display: none;
-}
-
-.nav div.media_button button.main_media_button {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;;
-    outline: 0;
-    border: none;
-    cursor: pointer;
-}
-
-.nav div.media_button button.main_media_button span{
-    width: 98%;
-    height: 1px;
-    display: block;
-    background-color: #fff;
-    margin-top: 9px;
-    margin-bottom: 10px;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
-    transform: rotateY(180deg);
-    transition: all 0.5s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
-    transform: rotateY(180deg);
-    transition: all 0.4s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
-    transform: rotateY(180deg);
-    transition: all 0.3s;
-    background-color: #c0c0c0;
-}
-
-.nav div.media_button button.active span:nth-of-type(1) {
-    transform: rotate3d(0, 0, 1, 45deg);
-    position: absolute;
-    margin: 0;
-}
-
-.nav div.media_button button.active span:nth-of-type(2) {
-    display: none;
-}
-
-.nav div.media_button button.active span:nth-of-type(3) {
-    transform: rotate3d(0, 0, 1, -45deg);
-    position: absolute;
-    margin: 0;
-}
-
-.nav div.media_button button.active:hover span:nth-of-type(1) {
-    transform: rotate3d(0, 0, 1, 20deg);
-}
-
-.nav div.media_button button.active:hover span:nth-of-type(3) {
-    transform: rotate3d(0, 0, 1, -20deg);
-}
-
-/* Home section */
-
-.home{
-    width: 100%;
-    height: 100vh;
-    background-color: #ddd;
-}
-
-/* Medai qurey section */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    
-    .container{
-        margin: 0;
+/* For mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .nav div.logo {
+        margin-left: 15px;   /* Adjust for smaller screens */
     }
     
-}
-
-
-
-
-@media screen and (max-width:768px) {
-    
-    .container{
-        margin: 0;
-    }
-    
-    .nav div.logo{
-        margin-left: 15px;
-    }
-    
-    .nav div.main_list{
+    .nav div.main_list {
         width: 100%;
         margin-top: 65px;
-        height: 0px;
-        overflow: hidden;
+        height: auto;
+        display: none;  /* Hide the menu initially */
     }
     
-    .nav div.show_list{
+    .nav div.main_list.show_list {
         height: 200px;
     }
-    
-    .nav div.main_list ul{
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-        top: 80px;
-        right: 0;
-        left: 0;
-    }
-    
-    .nav div.main_list ul li{
-        width: 100%;
-        height: 40px;
-        background-color:rgba(0,0,255,0.8);
-    }
-    
-    .nav div.main_list ul li a{
-      text-align: center;
-        line-height: 40px;
-        width: 100%;
-        height: 40px;
-        display: table;
-    }
-    
-    .nav div.media_button{
-        display: block;
-    }
+}
+
+/* Add margin-top to body or container to prevent overlap */
+body {
+    margin-top: 65px;  /* Ensure content below doesn't overlap with navbar */
+}
+
+/* Container for content */
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
 }

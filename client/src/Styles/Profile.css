@@ -1,0 +1,226 @@
+/* Profile Container */
+.profile {
+    width: 70%;
+    margin: 100px auto; /* Space above and below the profile */
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f5f5, #e3e3e3);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    justify-content: flex-start; /* Align items from top */
+}
+
+/* Profile Heading */
+.profile-heading {
+    font-size: 28px; /* Match heading size with the password section */
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: center; /* Keep the heading centered */
+    margin-bottom: 20px; /* Adds space below the heading */
+    margin-bottom: -10px;
+}
+
+/* Profile Name (Centered and Bold) */
+.profile-name {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold; /* Makes the name bold */
+    text-align: center; /* Centers the name */
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Adds space below the name box */
+}
+
+/* Profile Info Section (Centered and Aligned) */
+.profile-info {
+    width: 100%; /* Ensure it takes full width of container */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns content in the center */
+    text-align: left; /* Align text to the left */
+    
+}
+
+/* Email, Name, Password Input Fields */
+.profile-info input {
+    width: 100%;
+    max-width: 400px; /* Max width for name, email, and password */
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 12px 0;
+    text-align: center; /* Center the text inside the box */
+}
+
+/* Label Styling for Email, Name, Password */
+.profile-info label {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 8px; /* Adds space between label and input box */
+    width: 80%; /* Makes the label the same width as input */
+    text-align: left; /* Align label to the left */
+}
+
+/* Update Email Button (Small, Aligned Like Password Change Button) */
+/* Update Email Button (Small, Aligned Like Password Change Button) */
+.update-btn {
+    padding: 2px 10px; /* Smaller padding */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    width: 20%; /* Make the button width smaller */
+    margin-top: 10px;
+    display: block; /* Ensure the button is block-level for centering */
+    margin-left: auto;
+    margin-right: auto; /* Centers the button */
+}
+
+.update-btn:hover {
+    background-color: #2980b9;
+}
+
+.update-btn:active {
+    background-color: #2471a3;
+}
+
+
+/* Message Styles */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Password Change Section */
+.password-change {
+    width: 100%;
+    max-width: 400px; /* Max width for password section */
+    margin-top: 30px;
+}
+.password-change h3 {
+    margin-left: 126px;
+}
+
+/* Password Change Input */
+.password-change input {
+    width: 60%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    margin-left: 80px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 12px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensure buttons take full width */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:active {
+    background-color: #2471a3;
+}
+
+/* Actions Container */
+.actions {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px; /* Adds space above buttons */
+    width: 100%;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+.logout-btn:active {
+    background-color: #9b2d20;
+}
+
+/* Homepage Button */
+.homepage-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.homepage-btn:hover {
+    background-color: #27ae60;
+}
+
+.homepage-btn:active {
+    background-color: #1e8449;
+}
+/* Update Email Button (Small, Aligned Like Password Change Button) */
+.profile-info .update-btn {
+    padding: 12px 30px; /* Smaller padding */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    width: auto; /* Button width should adjust based on content */
+    max-width: 200px; /* Set a maximum width if needed */
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto; /* Center the button */
+}
+
+.profile-info .update-btn:hover {
+    background-color: #2980b9;
+}
+
+.profile-info .update-btn:active {
+    background-color: #2471a3;
+}
